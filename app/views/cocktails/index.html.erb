@@ -1,0 +1,13 @@
+<h1>burp</h1>
+<%= link_to 'new cocktail', new_cocktail_path %>
+
+<% @cocktails.each do |c| %>
+  <p>
+    <span><%= c.name %></span>
+    <span>
+      <em>
+        (<%= link_to c.doses.length.to_s << ' ingredients', cocktail_path(c) %>)
+      </em>
+    </span>
+  </p>
+<% end %>

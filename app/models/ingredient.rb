@@ -3,7 +3,7 @@
 # Class documentation
 class Ingredient < ApplicationRecord
   has_many :doses
-  has_many :cocktails, through: :dose
+  has_many :cocktails, through: :doses
 
   validates :name, presence: true, uniqueness: true, allow_blank: false
 end
