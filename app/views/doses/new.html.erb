@@ -1,9 +1,13 @@
-<h1>dose form</h1>
-<%= link_to 'back', cocktails_path %>
+<h1>
+  <span>Mix <%= @cocktail.name %></span>
+  <span><%= link_to :back, cocktail_path(@cocktail) %></span>
+</h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.association :ingredient %>
-  <%= f.input :description, collection: [
+  <%= f.label :ingredient, 'Pick an ingredient' %>
+  <%= f.association :ingredient, label: false %>
+  <%= f.label :description, 'Quantity' %>
+  <%= f.input :description, label: false, collection: [
     '1/2 Part',
     '1 Part',
     '1 1/2 Part',
@@ -11,11 +15,4 @@
     '2 1/2 Part'
     ] %>
   <%= f.button :submit %>
-<% end %>
-
-<% @cocktail.doses.each do |d| %>
-  <p>
-    <span><strong><%= d.description %></strong></span>
-    <span><%= d.ingredient.name %></span>
-  </p>
 <% end %>

@@ -1,0 +1,14 @@
+<header class="navbar-ghost">
+  <%= yield %>
+</header>
+
+<!-- This in application.html.erb body -->
+# <%= render 'partials/navbar' do %>
+#   <%= yield :navbar %>
+# <% end %>
+
+<!-- This in a view -->
+# <%= content_for :navbar do %>
+#   <%= render 'partials/cocktail' %>
+#   <%= link_to :back, cocktail_path(@cocktail) %>
+# <% end %>

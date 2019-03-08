@@ -1,16 +1,30 @@
-<h1><%= @cocktail.name %></h1>
-<%= link_to 'back', cocktails_path %>
+<h1>
+  <span><%= @cocktail.name %></span>
+  <span><%= render 'partials/back' %></span>
+</h1>
 
 <% @cocktail.doses.each do |d| %>
-  <p>
-    <span><strong><%= d.description %></strong></span>
-    <span><%= d.ingredient.name %></span>
+  <h2>
     <span>
-      <%= link_to 'delete', dose_path(d, cocktail_id: params[:id]),
+      <strong><%= d.description %></strong>
+    </span>
+    <span>
+      <%= d.ingredient.name %>
+    </span>
+    <span>
+      <%= link_to :delete, dose_path(d, cocktail_id: params[:id]),
           method: :delete,
           data: { confirm: "Are you sure?" } %>
     </span>
-  </p>
+  </h2>
 <% end %>
 
-<%= link_to 'add dose', new_cocktail_dose_path(@cocktail) %>
+<h2>
+  <span>
+    <%= link_to :add, new_cocktail_dose_path(@cocktail) %>
+  </span>
+</h2>
+
+<!-- Define a method that change the color of the ingredient (yellow for lemon, red for berries, etc.) Make the cocktail name pick the color of the most predominant ingredient -->
+
+<!-- Style a nice form -->

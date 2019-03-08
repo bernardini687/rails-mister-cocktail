@@ -1,5 +1,7 @@
-<h1>cocktail form</h1>
-<%= link_to 'back', cocktails_path %>
+<h1>
+  <span>New</span>
+  <span><%= render 'partials/back' %></span>
+</h1>
 
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
