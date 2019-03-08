@@ -3,13 +3,17 @@
   <span><%= link_to :new, new_cocktail_path %></span>
 </h1>
 
-<% @cocktails.each do |c| %>
-  <h2>
-    <span>
-      <%= c.name %>
-    </span>
-    <span>
-      <%= link_to c.doses.length.to_s << ' ingredients', cocktail_path(c) %>
-    </span>
-  </h2>
-<% end %>
+<div>
+  <% @cocktails.each_with_index do |c, i| %>
+    <h2>
+      <% if i.even? %>
+        <span class="cocktail-even-row"><%= c.name %></span>
+      <% else %>
+        <span class="cocktail-odd-row"><%= c.name %></span>
+      <% end %>
+      <span>
+        <%= link_to c.doses.length.to_s << ' ingredients', cocktail_path(c) %>
+      </span>
+    </h2>
+  <% end %>
+</div>

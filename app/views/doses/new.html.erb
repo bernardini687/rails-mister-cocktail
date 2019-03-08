@@ -4,15 +4,17 @@
 </h1>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.label :ingredient, 'Pick an ingredient' %>
-  <%= f.association :ingredient, label: false %>
-  <%= f.label :description, 'Quantity' %>
-  <%= f.input :description, label: false, collection: [
-    '1/2 Part',
-    '1 Part',
-    '1 1/2 Part',
-    '2 Part',
-    '2 1/2 Part'
-    ] %>
-  <%= f.button :submit %>
+  <h2>
+    <%= f.association :ingredient, as: :radio_buttons, label: false %>
+  </h2>
+  <h2 class="quantity">
+    <%= f.input :description, collection: [
+      '30ml',
+      '45ml',
+      '60ml'
+      ], as: :radio_buttons, label: false %>
+  </h2>
+  <h2 class="confirm-button">
+    <input type="submit" name="commit" value="add" data-disable-with="add">
+  </h2>
 <% end %>

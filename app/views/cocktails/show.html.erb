@@ -3,14 +3,18 @@
   <span><%= render 'partials/back' %></span>
 </h1>
 
-<% @cocktail.doses.each do |d| %>
-  <h2>
-    <span>
-      <strong><%= d.description %></strong>
+<% @cocktail.doses.each_with_index do |d, i| %>
+  <h2 class="bicolor">
+    <span class="quantity">
+      <%= d.description %>
     </span>
-    <span>
-      <%= d.ingredient.name %>
-    </span>
+
+    <% if i.even? %>
+      <span class="ingredient-even-row"><%= d.ingredient.name %></span>
+    <% else %>
+      <span class="ingredient-odd-row"><%= d.ingredient.name %></span>
+    <% end %>
+
     <span>
       <%= link_to :delete, dose_path(d, cocktail_id: params[:id]),
           method: :delete,

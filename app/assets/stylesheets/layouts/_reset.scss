@@ -27,8 +27,8 @@ body {
   font-size: 18px;
   line-height: 27px;
   margin: auto;
-  background-color: #202020;
-  color: #bcbcbc;
+  background-color: $healthy-black;
+  color: $light-gray;
 }
 h1 {
   font-size: 76px;
@@ -82,7 +82,8 @@ sub {
   margin: auto
 }
 a {
-  color: $light-blue;
+  color: $blue;
+  transition: .2s color ease;
   &:hover {
     color: #fff;
     text-decoration: none;

@@ -1,1 +1,24 @@
 // Specific CSS for your home-page
+h1 {
+  color: $red;
+}
+
+.quantity {
+  color: $light-gray;
+}
+
+.cocktail-even-row {
+  color: $light-green;
+}
+
+.cocktail-odd-row {
+  color: $green;
+}
+
+.ingredient-even-row {
+  color: $light-yellow;
+}
+
+.ingredient-odd-row {
+  color: $yellow;
+}

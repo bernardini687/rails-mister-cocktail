@@ -1,9 +1,10 @@
-<h1>
-  <span>New</span>
-  <span><%= render 'partials/back' %></span>
-</h1>
-
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
+  <h1>
+    <span class="type-name">
+      <input class="string required" placeholder="Cocktail Name" type="text" name="cocktail[name]" id="cocktail_name">
+    </span>
+    <span class="confirm-button">
+      <input type="submit" name="commit" value="add" data-disable-with="add">
+    </span>
+  </h1>
 <% end %>

@@ -1,0 +1,68 @@
+fieldset {
+  margin: 0;
+  div {
+    display: inline-block;
+    margin-right: 6px;
+  }
+  div:last-child {
+    margin: 0;
+  }
+  div:nth-of-type(even) {
+    color: $yellow;
+  }
+  div:nth-of-type(odd) {
+    color: $light-yellow;
+  }
+}
+
+.form-group {
+  margin: 0;
+}
+
+.quantity fieldset {
+  margin: 0;
+  div:nth-of-type(even) {
+    color: #898989;
+  }
+  div:nth-of-type(odd) {
+    color: $light-gray;
+  }
+}
+
+legend {
+  display: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"]:checked + label {
+  color: white;
+}
+
+input[type="radio"]:hover + label {
+  cursor: pointer;
+}
+
+.confirm-button input {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: $blue;
+  transition: .2s color ease;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.type-name input {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: $yellow;
+  cursor: text;
+  &:focus {
+    color: $light-yellow;
+  }
+}
