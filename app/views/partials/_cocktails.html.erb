@@ -1,0 +1,8 @@
+<h1 class="heading-color">Mixology</h1>
+
+<% @cocktails.each do |c| %>
+  <h2 class="cocktail-color">
+    <%= c.name %>
+    <%= link_to c.doses.length.to_s << ' ingredients', cocktail_path(c) %>
+  </h2>
+<% end %>

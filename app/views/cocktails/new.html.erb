@@ -1,10 +1,12 @@
+<%= render 'partials/cocktails' %>
+
 <%= simple_form_for @cocktail do |f| %>
-  <h1>
-    <span class="type-name">
-      <input class="string required" placeholder="Cocktail Name" type="text" name="cocktail[name]" id="cocktail_name">
-    </span>
-    <span class="confirm-button">
-      <input type="submit" name="commit" value="add" data-disable-with="add">
-    </span>
-  </h1>
+  <h2>
+    <input class="string required" placeholder="Cocktail Name" type="text" name="cocktail[name]" id="cocktail_name" autofocus>
+  </h2>
+  <h2>
+    <input type="submit" name="commit" value="save" data-disable-with="save">
+  </h2>
 <% end %>
+
+<h2><%= link_to :cancel, root_path %></h2>

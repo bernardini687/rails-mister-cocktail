@@ -1,34 +1,4 @@
-<h1>
-  <span><%= @cocktail.name %></span>
-  <span><%= render 'partials/back' %></span>
-</h1>
+<%= render 'partials/ingredients' %>
 
-<% @cocktail.doses.each_with_index do |d, i| %>
-  <h2 class="bicolor">
-    <span class="quantity">
-      <%= d.description %>
-    </span>
-
-    <% if i.even? %>
-      <span class="ingredient-even-row"><%= d.ingredient.name %></span>
-    <% else %>
-      <span class="ingredient-odd-row"><%= d.ingredient.name %></span>
-    <% end %>
-
-    <span>
-      <%= link_to :delete, dose_path(d, cocktail_id: params[:id]),
-          method: :delete,
-          data: { confirm: "Are you sure?" } %>
-    </span>
-  </h2>
-<% end %>
-
-<h2>
-  <span>
-    <%= link_to :add, new_cocktail_dose_path(@cocktail) %>
-  </span>
-</h2>
-
-<!-- Define a method that change the color of the ingredient (yellow for lemon, red for berries, etc.) Make the cocktail name pick the color of the most predominant ingredient -->
-
-<!-- Style a nice form -->
+<h2><%= link_to :add, new_cocktail_dose_path(@cocktail) %></h2>
+<h2><%= link_to :home, root_path %></h2>

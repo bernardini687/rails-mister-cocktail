@@ -1,20 +1,28 @@
-<h1>
-  <span>Mix <%= @cocktail.name %></span>
-  <span><%= link_to :back, cocktail_path(@cocktail) %></span>
-</h1>
+<%= render 'partials/ingredients' %>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
-  <h2>
-    <%= f.association :ingredient, as: :radio_buttons, label: false %>
-  </h2>
-  <h2 class="quantity">
+  <h2 class="ingredient-quantity">
     <%= f.input :description, collection: [
-      '30ml',
-      '45ml',
-      '60ml'
+      '10%',
+      '15%',
+      '20%',
+      '25%',
+      '30%',
+      '33%',
+      '40%',
+      '50%',
+      '60%',
+      '70%',
+      '80%',
+      '90%'
       ], as: :radio_buttons, label: false %>
   </h2>
+  <h2 class="ingredient-color">
+    <%= f.association :ingredient, as: :radio_buttons, label: false %>
+  </h2>
   <h2 class="confirm-button">
-    <input type="submit" name="commit" value="add" data-disable-with="add">
+    <input type="submit" name="commit" value="save" data-disable-with="save">
   </h2>
 <% end %>
+
+<h2><%= link_to :cancel, cocktail_path(@cocktail) %></h2>

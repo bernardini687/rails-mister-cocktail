@@ -1,24 +1,15 @@
-// Specific CSS for your home-page
-h1 {
-  color: $red;
+body {
+  font: 100% 'Poppins', 'Helvetica', 'sans-serif';
+  background-color: $light-gray;
+  color: $healthy-black;
 }
 
-.quantity {
-  color: $light-gray;
+.page-item {
+  max-width: 768px;
+  margin: auto;
 }
 
-.cocktail-even-row {
-  color: $light-green;
-}
-
-.cocktail-odd-row {
-  color: $green;
-}
-
-.ingredient-even-row {
-  color: $light-yellow;
-}
-
-.ingredient-odd-row {
-  color: $yellow;
-}
+.ingredient-quantity { color: gray; }
+.heading-color { color: $red; }
+.cocktail-color { color: $green; }
+.ingredient-color { color: $yellow; }
