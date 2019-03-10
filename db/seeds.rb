@@ -26,20 +26,19 @@ Ingredient.destroy_all
 #   Ingredient.create!(name: ingredient)
 # end
 
-Ingredient.create(name: 'Lemon')
-Ingredient.create(name: 'Banana')
-Ingredient.create(name: 'Ananas')
+Ingredient.create(name: 'Beer')
+Ingredient.create(name: 'Champagne')
+Ingredient.create(name: 'Gin')
+Ingredient.create(name: 'Rum')
+Ingredient.create(name: 'Tequila')
+Ingredient.create(name: 'Vodka')
 
-Ingredient.create(name: 'Kiwi')
-Ingredient.create(name: 'Spinach')
-Ingredient.create(name: 'Broccoli')
+Ingredient.create(name: 'Coca-Cola')
+Ingredient.create(name: 'Ginger ale')
+Ingredient.create(name: 'Tonic water')
 
-Ingredient.create(name: 'Mango')
-Ingredient.create(name: 'Orange')
-Ingredient.create(name: 'Carrot')
-
-Ingredient.create(name: 'Tomato')
-Ingredient.create(name: 'Strawberry')
-Ingredient.create(name: 'Cherry')
+Ingredient.create(name: 'Apple juice')
+Ingredient.create(name: 'Orange juice')
+Ingredient.create(name: 'Pineapple juice')
 
 puts 'Finished!'
